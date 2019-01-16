@@ -1,3 +1,5 @@
 # Hash-based-Sharding
 This project provides a more simple, efficient and flexible alternative that does not require virtual shards.
 Sharding implementations use consistent hashing for distributing a database uniformly across the servers in the topology. Each data item in the database is identified uniquely by a sharding key. The sharding keys are hashed into a hash ring. This hash ring is split into equal sized partitions and each server is allocated an equal number of partitions. Each partition represents a portion of the database, referred to as a virtual shard. Maintaining virtual shards and presenting an unified picture of the database to the user requires complicated logic. This paper provides a mathematical analysis of the existing method of sharding and provides a more simple, efficient and flexible alternative that does not require virtual shards. The proposed method is compared to the existing method by simulating the algorithms on multiple datasets and it is shown that the expected distribution is obtained.
+
+This is th implementation of https://ieeexplore.ieee.org/document/8227985
